@@ -4,10 +4,14 @@
 javac *.java -d out
 
 //recompiler le serveur selement apres changements
+
 javac StockServeur.java -d out/server -classpath out/server
 
 //generer le fichier stub
+
 rmic StokImpl -classpath out/server
+
+rmic StokImpl -classpath out/client
 
 //lancer
 
